@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import chiquis from '../components/image/chiquis.png'; 
+import chiquis from '../components/image/chiquis.png';
 
 const Banner = () => {
   return (
@@ -26,26 +26,27 @@ const BannerContainer = styled.div`
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 86vh;
   background: #F1E0DB;
-  /*background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent); Degradado negro */
-  
+  padding-top: 5.5rem; /* Ajusta el padding superior para mover el contenido hacia abajo */
+
   @media (max-width: 768px) {
-    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-    height: auto; /* Altura automática */
+    flex-direction: column;
+    height: auto;
+    padding-top: 7.5rem; /* Ajuste menor en pantallas pequeñas */
   }
 `;
 
 const ImageContainer = styled.div`
   flex: 1;
   height: 100%;
-  overflow: hidden; /* Esto evita que la imagen sobresalga del contenedor */
+  overflow: hidden;
 `;
 
 const ChiquisImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  object-fit: cover;
 `;
 
 const TextContainer = styled.div`
@@ -54,25 +55,26 @@ const TextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  color: #9D5A4D; /* Texto en blanco */
-  text-align: center; /* Centramos el texto */
+  padding: 3rem;
+  margin-top: 1rem; /* Ajuste de margen superior para desplazar el texto hacia abajo */
+  color: #9D5A4D;
+  text-align: center;
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 
     @media (max-width: 768px) {
-      font-size: 2rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+      font-size: 2.5rem;
     }
   }
 
   h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem; /* Espacio entre líneas */
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
 
     @media (max-width: 768px) {
-      font-size: 1.2rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+      font-size: 1.5rem;
     }
   }
 `;
